@@ -1,0 +1,75 @@
+/* Lines */
+
+.line,
+.line-wnum {
+    display: flex;
+    width: 500px;
+    height: 20px;
+}
+
+.line-text {
+    font-family: 'Arial', Times, serif;
+    font-size: 16px;
+    display: inline;
+    width: 90%;
+    height: inherit;
+}
+
+/* Line number */
+
+.num, .num-hover {
+    display: inline;
+    width: 10%;
+    text-align: right;
+    padding-right: 5px;
+}
+
+.num-hover {
+    opacity: 0;
+}
+
+.line:hover > .num-hover {
+    opacity: 0.5;
+}
+
+/* Book selector */
+
+#title {
+    padding: 5px;
+    display: flex;
+}
+
+.book-selector, .book-selector-on {
+    font-family: 'Arial', Times, serif;
+    background-color: green;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    width: max-content;
+    height: max-content;
+    display: inline;
+    cursor: pointer;
+}
+
+.book-selector-on {
+    padding: 25px;
+    font-size: 25px;
+    text-decoration: underline;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+
+/* Nav */
+
+#jump-top {
+    position: sticky;
+    bottom: 5px;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 10%;
+    width: max-content;
+    height: max-content;
+    cursor: pointer;
+    text-decoration: none;
+}
