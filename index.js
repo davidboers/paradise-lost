@@ -1,4 +1,11 @@
 
+setLineTarget = function () {
+    const input = document.getElementById('jump-line-input');
+    const value = input.value;
+    const link = document.getElementById('jump-line-link');
+    link.setAttribute('href', `#line-${value}`);
+};
+
 importText = async function (book) {
     const fileName = `books/${book}.txt`;
     const selectors = document.getElementsByClassName('book-selector-on');
@@ -16,8 +23,6 @@ importText = async function (book) {
     }
     const response_text = await response.text();
 
-    console.log(response_text);
-
     const partitioned_content = response_text.split(/\r?\n\r?\n/);
     const text_block = document.getElementById('text');
     text_block.innerHTML = ''; // Clear text box
@@ -29,9 +34,9 @@ importText = async function (book) {
             let line = block[l];
 
             const line_elem = document.createElement('div');
-
             const line_num_elem = document.createElement('div');
             line_num_elem.textContent = total_lines;
+            line_num_elem.id = `line-${total_lines}`;
             if (total_lines % 5 == 0) {
                 line_elem.className = 'line-wnum';
                 line_num_elem.className = 'num';

@@ -17,7 +17,8 @@
 
 /* Line number */
 
-.num, .num-hover {
+.num,
+.num-hover {
     display: inline;
     width: 10%;
     text-align: right;
@@ -28,7 +29,7 @@
     opacity: 0;
 }
 
-.line:hover > .num-hover {
+.line:hover>.num-hover {
     opacity: 0.5;
 }
 
@@ -39,7 +40,8 @@
     display: flex;
 }
 
-.book-selector, .book-selector-on {
+.book-selector,
+.book-selector-on {
     font-family: 'Arial', Times, serif;
     background-color: green;
     color: white;
@@ -61,15 +63,28 @@
 
 /* Nav */
 
-#jump-top {
+#nav {
+    display: flex;
     position: sticky;
     bottom: 5px;
+}
+
+#jump-top,
+#jump-line {
     padding: 10px;
-    background-color: red;
-    color: white;
-    border-radius: 10%;
     width: max-content;
     height: max-content;
-    cursor: pointer;
     text-decoration: none;
+    display: inline;
+}
+
+#jump-top, #jump-line-link {
+    background-color: red;
+    border-radius: 10%;
+    color: white;
+    cursor: pointer;
+}
+
+#jump-line-link {
+    padding: 5px;
 }

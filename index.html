@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Paradise Lost</title>
-        <script src="./index.js"></script>
-        <link rel="stylesheet" href="./style.css"></style>
-    </head>
-    <body>
-        <div>
-            <div id="title">
-                <div onclick="importText('Book1')" class="book-selector on" id="Book1">1</div>
-                <div onclick="importText('Book2')" class="book-selector" id="Book2">2</div>
-                <div onclick="importText('Book3')" class="book-selector" id="Book3">3</div>
-                <div onclick="importText('Book4')" class="book-selector" id="Book4">4</div>
-                <div onclick="importText('Book5')" class="book-selector" id="Book5">5</div>
-                <div onclick="importText('Book6')" class="book-selector" id="Book6">6</div>
-                <div onclick="importText('Book7')" class="book-selector" id="Book7">7</div>
-                <div onclick="importText('Book8')" class="book-selector" id="Book8">8</div>
-                <div onclick="importText('Book9')" class="book-selector" id="Book9">9</div>
-                <div onclick="importText('Book10')" class="book-selector" id="Book10">10</div>
-                <div onclick="importText('Book11')" class="book-selector" id="Book11">11</div>
-                <div onclick="importText('Book12')" class="book-selector" id="Book12">12</div>
-            </div>
-            <div id="text">
-                
-            </div>
-            <a href="#title" id="jump-top">top</a>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paradise Lost</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="title">
+            <div onclick="importText('Book1')" class="book-selector on" id="Book1">1</div>
+            <div onclick="importText('Book2')" class="book-selector" id="Book2">2</div>
+            <div onclick="importText('Book3')" class="book-selector" id="Book3">3</div>
+            <div onclick="importText('Book4')" class="book-selector" id="Book4">4</div>
+            <div onclick="importText('Book5')" class="book-selector" id="Book5">5</div>
+            <div onclick="importText('Book6')" class="book-selector" id="Book6">6</div>
+            <div onclick="importText('Book7')" class="book-selector" id="Book7">7</div>
+            <div onclick="importText('Book8')" class="book-selector" id="Book8">8</div>
+            <div onclick="importText('Book9')" class="book-selector" id="Book9">9</div>
+            <div onclick="importText('Book10')" class="book-selector" id="Book10">10</div>
+            <div onclick="importText('Book11')" class="book-selector" id="Book11">11</div>
+            <div onclick="importText('Book12')" class="book-selector" id="Book12">12</div>
         </div>
-        <script>
-            importText("Book1")
-        </script>
-    </body>
+        <div id="text">
+
+        </div>
+        <div id="nav">
+            <a href="#title" id="jump-top">top</a>
+            <div id="jump-line">
+                <label for="jump-line-input">Jump to line:</label>
+                <input type="number" id="jump-line-input" name="jump-line-input" oninput="setLineTarget()" ></input>
+                <a id="jump-line-link">Go</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        importText("Book1")
+    </script>
+</body>
+
 </html>
