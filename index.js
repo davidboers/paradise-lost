@@ -10,7 +10,7 @@ importText = async function (book) {
     const fileName = `books/${book}.txt`;
     const selectors = document.getElementsByClassName('book-selector-on');
     let selector;
-    for (const selector of selectors) {
+    for (selector of selectors) {
         selector.className = 'book-selector';
     }
     selector = document.querySelector(`.book-selector#${book}`);
@@ -29,7 +29,7 @@ importText = async function (book) {
     for (let block of partitioned_content) {
         block = block.split(/\r?\n/);
         const block_elem = document.createElement('div');
-        for (const line of block) {
+        for (let line of block) {
             const line_elem = document.createElement('div');
             const line_num_elem = document.createElement('div');
             line_num_elem.textContent = total_lines;
