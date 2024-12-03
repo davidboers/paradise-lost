@@ -19,6 +19,7 @@
 
 .num,
 .num-hover {
+    font-family: 'Arial', Times, serif;
     display: inline;
     width: 10%;
     text-align: right;
