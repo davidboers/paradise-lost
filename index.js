@@ -10,8 +10,7 @@ importText = async function (book) {
     const fileName = `books/${book}.txt`;
     const selectors = document.getElementsByClassName('book-selector-on');
     let selector;
-    for (let i in selectors) {
-        selector = selectors[i];
+    for (const selector of selectors) {
         selector.className = 'book-selector';
     }
     selector = document.querySelector(`.book-selector#${book}`);
@@ -27,12 +26,10 @@ importText = async function (book) {
     const text_block = document.getElementById('text');
     text_block.innerHTML = ''; // Clear text box
     let total_lines = 1;
-    for (let i in partitioned_content) {
-        let block = partitioned_content[i].split(/\r?\n/);
+    for (let block of partitioned_content) {
+        block = block.split(/\r?\n/);
         const block_elem = document.createElement('div');
-        for (let l in block) {
-            let line = block[l];
-
+        for (const line of block) {
             const line_elem = document.createElement('div');
             const line_num_elem = document.createElement('div');
             line_num_elem.textContent = total_lines;
