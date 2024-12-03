@@ -79,6 +79,12 @@
     display: inline;
 }
 
+#jump-line-box {
+    background-color: gray;
+    padding: 10px;
+    display: inline;
+}
+
 #jump-top, #jump-line-link {
     background-color: red;
     border-radius: 10%;
@@ -88,4 +94,8 @@
 
 #jump-line-link {
     padding: 5px;
+}
+
+#jump-line-input {
+    width: 50px;
 }
